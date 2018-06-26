@@ -1,0 +1,32 @@
+th {
+	padding-top : 20px;
+	border-collapse: collapse;
+	padding-bottom: 5px;
+
+}
+
+td {
+
+	background: #EDEEEF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+
+
+#senadores {
+	padding-top : 2px;
+	border-collapse: collapse;
+	padding-bottom: 3px;
+
+}
+
+#titulo {
+	padding-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.MuiModal-root-181{
+	z-index: 1090 !important;
+}
+
+
+.MuiAppBar-colorPrimary-102{
+	background-color: #0C97FF !important;
+}
