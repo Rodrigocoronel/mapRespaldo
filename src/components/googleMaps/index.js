@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 import { GoogleStyles } from './styles';
 import { connect } from 'react-redux'
 
+import {request} from '../../actions/request';
+
 import swal from 'sweetalert2';
 
-import diputados from './seccionesconcolores.kml';
+/*Kml*/
 import diputados1 from './diputados1.kml';
 import diputados2 from './diputados2.kml';
 import diputados3 from './diputados3.kml';
@@ -14,17 +16,8 @@ import diputados5 from './diputados5.kml';
 import diputados6 from './diputados6.kml';
 import diputados7 from './diputados7.kml';
 import diputados8 from './diputados8.kml';
-import senadores from './senadores.kml';
-import senadores1 from './senadores1.kml';
-import senadores2 from './senadores2.kml';
-import senadores3 from './senadores3.kml';
-import senadores4 from './senadores4.kml';
-import senadores5 from './senadores5.kml';
-import senadores6 from './senadores6.kml';
-import senadores7 from './senadores7.kml';
-import senadores8 from './senadores8.kml';
 
-
+/*Images*/
 import angry from './images/angry.png';
 import haha from './images/haha.png';
 import like from './images/like.png';
@@ -82,7 +75,7 @@ class Map extends Component {
 
     componentDidMount() {
 
-        console.log(senadores1)
+        
 
         let _self = this;
         // crear el mapa 
@@ -136,7 +129,8 @@ class Map extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
-        let {filtrado , seccion , distrito } = nextProps;
+
+        let {filtrado , seccion , distrito , periodo} = nextProps;
         let {mapas , mapaActual , mapaRegistro , conteoMapas} = this.state;
         let index = -1;
         mapaRegistro = mapaActual;
@@ -150,13 +144,11 @@ class Map extends Component {
         let docIndex , indexD;
         
         if(distrito > 0) {
-            if(filtrado == 1) {
+            
             regexfiltrado='diputados'+distrito;
-            }else {
-                regexfiltrado='senadores'+distrito;
-            }
+            
             var patt = new RegExp(regexfiltrado);
-            console.log(regexfiltrado)
+            
             for(let x=0 ; x<geoXml.docs.length ; x++) {
                 let regex = patt;
                 let match = regex.exec(geoXml.docs[x].baseUrl);
@@ -169,67 +161,17 @@ class Map extends Component {
                     geoXml.hideDocument(geoXml.docs[x]);
             }
         }else if(distrito === 0){
-            if(geoXml.docs.length > 8){
-                if(filtrado == 1 ) {
-                    show=0;
-                    showLimit = 8;
-                    hide=8;
-                    hideLimit = 16; 
-                }
-                else {
-                    show=8;
-                    showLimit = 16
-                    hide=0;
-                    hideLimit = 8; 
-                }
-            }else{
-                if(filtrado == 1 ) {
-                    show=0;
-                    showLimit = 8;
-                }
-                else {
-                    show=8;
-                    showLimit = 16
-                }
-            }
-
+            show=0;
+            showLimit = 8;
+                
             //show all the districts of filter
             if(geoXml.docs.length > 0){
                 for(show; show < showLimit; show++) {
-                geoXml.showDocument(geoXml.docs[show]);
-            }
-            }
-            
-            //hide all other option
-            if(hide !== ''){
-                for(hide; hide < hideLimit; hide++) {
-                    geoXml.hideDocument(geoXml.docs[hide]);
+                    geoXml.showDocument(geoXml.docs[show]);
                 }
             }
         }
-
-        if(filtrado === 2 && this.state.primero) {
-            geoXml.hideDocument(geoXml.docs[0]);
-            geoXml.hideDocument(geoXml.docs[1]);
-            geoXml.hideDocument(geoXml.docs[2]);
-            geoXml.hideDocument(geoXml.docs[3]);
-            geoXml.hideDocument(geoXml.docs[4]);
-            geoXml.hideDocument(geoXml.docs[5]);
-            geoXml.hideDocument(geoXml.docs[6]);
-            geoXml.hideDocument(geoXml.docs[7]);
-            geoXml.parse(senadores1);
-            geoXml.parse(senadores2);
-            geoXml.parse(senadores3);
-            geoXml.parse(senadores4);
-            geoXml.parse(senadores5);
-            geoXml.parse(senadores6);
-            geoXml.parse(senadores7);
-            geoXml.parse(senadores8);
-
-            this.setState({primero : false})
-        }
         
-
         //buscar la seccion
        function findSeccion(element) {
           return element.name == nextProps.seccion;
@@ -246,13 +188,10 @@ class Map extends Component {
                 index = geoXml.docs[docIndex].placemarks.findIndex(findSeccion);
             }
             else{
-                if(filtrado == 1){
-                    x = 0;
-                    limit = 8;
-                }else{
-                    x = 8;
-                    limit = 16;
-                }
+                
+                x = 0;
+                limit = 8;
+                
                 for(x; x < limit; x++){
                     indexD = geoXml.docs[x].placemarks.findIndex(findSeccion);
                     if(indexD !== -1){
@@ -262,8 +201,7 @@ class Map extends Component {
                 }
                 
             }
-            console.log(docIndex)
-            console.log(index)
+            
             if(index !== -1) {
                 let coords = geoXml.docs[docIndex].placemarks[index].Polygon[0].outerBoundaryIs[0].coordinates[0];
                 //map.setCenter(new window.google.maps.LatLng(coords.lat, coords.lng));
@@ -273,8 +211,74 @@ class Map extends Component {
                 swal("Sección", "No encontrada", "error");
             }
         }
+        console.log(this.props)
+        console.log(nextProps)
+        if( (this.props.periodo !== nextProps.periodo || this.props.filtrado !== nextProps.filtrado) && this.props.periodo !== undefined){
+            console.log('entro',nextProps.periodo)
+            let url = '';
+            if(nextProps.filtrado === 1){
+                url = 'seccionesDiputadosDistrito/';
+            }else{
+                url = 'seccionesSenadoresDistrito/';
+            }
+            for(var dis=1 ; dis < 9 ; dis++){
+                request.get('api/'+url+dis+'/'+periodo.created_at)
+                .then(function(response){
+                    if(response.status === 200){
+                        // response.data.map((key,index)=>{
+                        //     console.log(key)
+                        // })           
+                        print(response.data)
+                        
+                    }
+                });
+            }
+        }
+
+        function buscarKml (distrito) {
+                
+                regexfiltrado='diputados'+distrito;
+                let index_kml;
+                var patt = new RegExp(regexfiltrado);
+                
+                for(let x=0 ; x<geoXml.docs.length ; x++) {
+                    let regex = patt;
+                    let match = regex.exec(geoXml.docs[x].baseUrl);
+                    
+                    if(match !== null){
+                        index_kml = x;
+                        break;
+                    }
+                }
+
+                return index_kml;
+            }
+
+            function print(params) {
+
+                let index_kml = buscarKml(params[0].distrito)
+                console.log('params --> '+params[0].distrito)
+                console.log('index del docs -->' + index_kml)
+                for(var x = 0 ; x<params.length ; x++){
+                    // console.log(params[x].color)
+                    geoXml.docs[index_kml].placemarks[x].polygon.fillColor = params[x].color;
+                    
+                }
+                if(nextProps.distrito == 0){
+                    geoXml.hideDocument(geoXml.docs[index_kml]);
+                    geoXml.showDocument(geoXml.docs[index_kml]);
+                }
+                else if(params[0].distrito == nextProps.distrito ){
+                    geoXml.hideDocument(geoXml.docs[index_kml]);
+                    geoXml.showDocument(geoXml.docs[index_kml]);
+                }
+                
+            }
+
+        console.log(geoXml.docs)
 
     }
+
 
     render() {
         return (

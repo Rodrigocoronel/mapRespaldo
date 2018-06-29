@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 //dev
-export const API_URL = 'http://127.0.0.1:8000';
+//export const API_URL = 'http://127.0.0.1:8000';
 //production
-//export const API_URL = 'http://verify.encuestasbc.org';
+export const API_URL = 'http://verify.encuestasbc.org';
 
 
 export const request = axios.create({

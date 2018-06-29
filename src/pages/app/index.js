@@ -212,7 +212,7 @@ class App extends Component {
     	.then(function(response){
     		if(response.status === 200){
     			self.setState({periodo_senadores : response.data});
-    			console.log(response.data[0].created_at)
+    			
     			self.props.promedio_senadores(response.data[0].created_at);
     		}
     	});
@@ -280,7 +280,7 @@ class App extends Component {
 		evt.preventDefault();
 		let {search_seccion} = this.state;
 		this.setState({send_seccion : search_seccion});
-		console.log(search_seccion)
+		
 	}
 
 	_handleInputChange = name => event => {
@@ -315,7 +315,7 @@ class App extends Component {
 	}
 
 	render() {
-		console.log(this.props.secciones.promedio_senadores)
+		
 		const { classes } = this.props;
 		let {tabActive , promedio_diputados , promedio_senadores , distrito} = this.state;
 		let {lat , long , zoom , kmz , reacciones,circulos} = this.state;
