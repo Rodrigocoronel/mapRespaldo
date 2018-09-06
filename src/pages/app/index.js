@@ -349,7 +349,7 @@ class App extends Component {
 				<AppBar >
 					<Toolbar >
 						<Typography variant="title" color='inherit' className={classes.flex}>
-							Nimblin
+							We Natives
 						</Typography>
 						<IconButton color="inherit" onClick={() => {
 
@@ -617,8 +617,12 @@ class App extends Component {
 						            name="filtrado"
 						            className={classes.selectEmpty}
 						          	>
-						            <MenuItem value={1}>Diputados</MenuItem>
+						            <MenuItem value={1}>Diputados Fed.</MenuItem>
 						            <MenuItem value={2}>Senadores</MenuItem>
+						            <MenuItem value={3}>Diputados Loc.</MenuItem>
+						            <MenuItem value={4}>Gobernador</MenuItem>
+						            <MenuItem value={5}>Alcaldias</MenuItem>
+						            <MenuItem value={6}>Precandidatos</MenuItem>
 						          </Select>
 						        </FormControl>
 						    </div>

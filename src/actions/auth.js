@@ -4,14 +4,11 @@ export const signin = (params) => {
 
     return (dispatch) => {
         
-        if( params.username === 'adsnimblin006@outlook.com' && 
-            params.password === '0699711232'
-            || params.username === 'adsnimblin001@outlook.com' && 
-            params.password === '0699711232'
-            || params.username === 'adsnimblin002@outlook.com' && 
-            params.password === '0699711232'
-            || params.username === 'adsnimblin003@outlook.com' && 
-            params.password === '0699711233'  ) {
+        if( params.username === 'hugo@email.com' && 
+            params.password === 'New1234'
+            || params.username === 'admin@email.com' &&
+            params.password === 'abc123!'
+            ) {
 
             dispatch({type: 'AUTH_SIGNIN_SUCCESS'});
             return;
