@@ -426,13 +426,13 @@ class App extends Component {
 							<div>
 				        	{ this.state.filtrado === 1 &&
 				        		<div>
-						        	<div align="center"><strong> Partidos </strong></div>
+						        	<div align="center"><strong> Partidos / Alianzas </strong></div>
 						        	<br/>
 						        	<table width="100%">
 						        		<tbody>
 							        		<tr aling="center">
-							        			<th>{'Pan'}</th>
-							        			<th>{'Pri'}</th>
+							        			<th>{'VaxMexico'}</th>
+							        			<th>{'PES'}</th>
 							        			<th>{'Morena'}</th>
 							        			<th>{'Otros'}</th>
 							        		</tr>
@@ -444,12 +444,12 @@ class App extends Component {
 						        			</tr>
 						        		</tbody>
 							        </table>
-									<div align="center"><strong> Candidatos </strong></div>
+									<div align="center"><strong> Candidato(s) </strong></div>
 						        	<table width="100%">
 						        		<tbody>
 							        		<tr aling="center">
-							        			<th>{'Pan'}</th>
-							        			<th>{'Pri'}</th>
+							        			<th>{'VaxMexico'}</th>
+							        			<th>{'PES'}</th>
 							        			<th>{'Morena'}</th>
 							        			<th>{'Otros'}</th>
 							        		</tr>
@@ -468,15 +468,15 @@ class App extends Component {
 						        	<table width="100%">
 						        		<thead>
 						        			<tr>
-						        				<th id="titulo" colSpan='4'>Partidos</th>
+						        				<th id="titulo" colSpan='4'>Partidos / Alianzas </th>
 						        			</tr>
 						        		</thead>
 						        		<tbody>
 							        		<tr aling="center">
-							        			<th id="senadores">{'Pan'}</th>
-							        			<th id="senadores">{'Pri'}</th>
-							        			<th id="senadores">{'Morena'}</th>
-							        			<th id="senadores">{'Otros'}</th>
+							        			<th>{'VaxMexico'}</th>
+							        			<th>{'PES'}</th>
+							        			<th>{'Morena'}</th>
+							        			<th>{'Otros'}</th>
 							        		</tr>
 						        			<tr aling="center">
 							        			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.p_pan : ''}</td>
@@ -489,14 +489,14 @@ class App extends Component {
 						        	<table width="100%">
 						        		<thead>
 						        			<tr>
-						        				<th id="titulo" colspan='4'>Candidato 1</th>
+						        				<th id="titulo" colspan='4'>Candidato(s)</th>
 						        			</tr>
 						        		</thead>
 						        		<tbody>
 						        			<tr aling="center">
-							        			<th id="senadores" >{'Gina Cruz'}</th>
-							        			<th id="senadores" >{'Alejandro Arregui'}</th>
-							        			<th id="senadores" >{'Jaime Bonilla'}</th>
+							        			<th id="senadores" >{'Lupita'}</th>
+							        			<th id="senadores" >{'Hank'}</th>
+							        			<th id="senadores" >{'Mariana'}</th>
 							        			<th id="senadores" >{'Otros'}</th>
 							        		</tr>
 						        			<tr aling="center">
@@ -507,27 +507,30 @@ class App extends Component {
 						        			</tr>
 						        		</tbody>
 						        	</table>
-						        	<table width="100%">
-						        		<thead>
-						        			<tr>
-						        				<th id="titulo" colspan='4'>Candidato 2</th>
-						        			</tr>
-						        		</thead>
-						        		<tbody>
-						        			<tr>
-							        			<th id="senadores">{'Jorge Ramos'}</th>
-							        			<th id="senadores">{'Juanita Perez'}</th>
-							        			<th id="senadores">{'Alejandra Leon'}</th>
-							        			<th id="senadores">{'Otros'}</th>
-							        		</tr>
-						        			<tr >
-							        			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_pan : ''}</td>
-							        			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_pri : ''}</td>
-							        			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_morena : ''}</td>
-							        			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_otros : ''}</td>
-						        			</tr>
-						        		</tbody>
-						        	</table>
+						        	{
+
+						        	// 	<table width="100%" className='d-none'>
+						        	// 	<thead>
+						        	// 		<tr>
+						        	// 			<th id="titulo" colspan='4'>Candidato 2</th>
+						        	// 		</tr>
+						        	// 	</thead>
+						        	// 	<tbody>
+						        	// 		<tr>
+							        // 			<th id="senadores">{'Jorge Ramos'}</th>
+							        // 			<th id="senadores">{'Juanita Perez'}</th>
+							        // 			<th id="senadores">{'Alejandra Leon'}</th>
+							        // 			<th id="senadores">{'Otros'}</th>
+							        // 		</tr>
+						        	// 		<tr >
+							        // 			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_pan : ''}</td>
+							        // 			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_pri : ''}</td>
+							        // 			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_morena : ''}</td>
+							        // 			<td id="senadores" align="center">{this.props.secciones !== null ? this.props.secciones.data.s2_otros : ''}</td>
+						        	// 		</tr>
+						        	// 	</tbody>
+						        	// </table>
+						        	}
 						        </div>
 					        }
 				        	</div>
@@ -617,12 +620,14 @@ class App extends Component {
 						            name="filtrado"
 						            className={classes.selectEmpty}
 						          	>
-						            <MenuItem value={1}>Diputados Fed.</MenuItem>
-						            <MenuItem value={2}>Senadores</MenuItem>
-						            <MenuItem value={3}>Diputados Loc.</MenuItem>
-						            <MenuItem value={4}>Gobernador</MenuItem>
-						            <MenuItem value={5}>Alcaldias</MenuItem>
-						            <MenuItem value={6}>Precandidatos</MenuItem>
+						            <MenuItem value={1}>Presidente Mun.</MenuItem>
+						            <MenuItem value={2}>Gobernador</MenuItem>
+						            {
+						            // <MenuItem value={3}>Diputados Loc.</MenuItem>
+						            // <MenuItem value={4}>Gobernador</MenuItem>
+						            // <MenuItem value={5}>Alcaldias</MenuItem>
+						            // <MenuItem value={6}>Precandidatos</MenuItem>
+						        }
 						          </Select>
 						        </FormControl>
 						    </div>

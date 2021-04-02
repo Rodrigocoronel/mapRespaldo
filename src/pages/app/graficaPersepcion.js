@@ -54,7 +54,7 @@ export default class GraficaGeneral extends Component{
 		            <div className="small mb-4 card-subtitle"></div>
 		            <div style={{width: '100%', height: '280px' , paddingTop : '40px', paddingLeft: '10px'}}>
 		            	<div style={{display : 'inline-block', textAlign : 'center'}}>
-		            		<strong>Partidos</strong>
+		            		<strong>Partidos / Alianzas</strong>
 		                    <PieChart width={260} height={250}>
 	  							<Pie data={this.props.data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="blue" label>
 	  								<Cell fill="rgb(112,121,255)" />
@@ -66,7 +66,7 @@ export default class GraficaGeneral extends Component{
 	  						</PieChart>
 	  					</div>
 	  					<div style={{display : 'inline-block', textAlign : 'center', paddingLeft : '40px'}}>
-	  						<strong>Candidatos</strong>
+	  						<strong>Candidato(s)</strong>
 		                	<PieChart width={260} height={250}>
 	  							<Pie data={this.props.candidatos} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="blue" label>
 	  								<Cell fill="rgb(112,121,255)" />
@@ -88,8 +88,8 @@ export default class GraficaGeneral extends Component{
 							<AppBar position="static">
 					          <Tabs value={tabActive} style={{background : '#202F38'}}onChange={this._handleChangeTab}>
 					            <Tab label="Partido" />
-					            <Tab label="Candidato 1" />
-					            <Tab label="Candidato 2" />
+					            <Tab label="Candidato(s)" />
+					            
 					          </Tabs>
 					        </AppBar>
 					        {tabActive === 0 && 

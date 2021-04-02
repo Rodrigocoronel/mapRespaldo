@@ -32,7 +32,7 @@ export default class GraficaGeneral extends Component{
 	            <div className="small mb-4 card-subtitle"></div>
 	            <div align="center" style={{width: '100%', height: '280px' , paddingTop : '40px'}}>
 	            	<div align="center" style={{paddingBottom : '20px'}}>
-	            		<label>Promedio General Diputados Distrito {this.props.name}</label>
+	            		<label>Promedio General Distrito {this.props.name}</label>
 	                </div>
 	                    <BarChart width={550} height={250} data={data}>
 	                      <CartesianGrid strokeDasharray="3 3" />
