@@ -689,12 +689,12 @@ class App extends Component {
 						        </FormControl>
 						    </div>
 					        <div style={{paddingLeft : '20px', paddingTop : '10px'}}>
-						        <div style={{display : 'inline-block'}}><div style={styling.pri}></div>Pri</div>
-								<div style={{display : 'inline-block' , paddingLeft : '25px'}}><div style={styling.pan}></div>Pan</div>
+						        <div style={{display : 'inline-block'}}><div style={styling.pri}></div>VXM</div>
+								<div style={{display : 'inline-block' , paddingLeft : '25px'}}><div style={styling.pan}></div>PES</div>
 								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.morena}></div>Morena</div>
-								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.panMorena}></div>Pan/Morena</div>
-								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.priMorena}></div>Pri/Morena</div>
-								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.priPan}></div>Pri/Pan</div>
+								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.panMorena}></div>PES/Morena</div>
+								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.priMorena}></div>VXM/Morena</div>
+								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.priPan}></div>VXM/PES</div>
 								<div style={{display : 'inline-block' , paddingLeft : '25px' }}><div style={styling.otro}></div>Otro</div>
 					    	</div>
 						</Paper>

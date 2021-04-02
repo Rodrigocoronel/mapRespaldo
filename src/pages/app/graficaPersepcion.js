@@ -23,7 +23,7 @@ import {
 import Button from '@material-ui/core/Button';
 
 const data = [
-	{value : 33.3, name : 'pan'},
+	{value : 33.3, name : 'VXM'},
 	{value : 17.8, name : 'pri'}, 
 	{value : 35.6, name : 'morena'},
 	{value : 10, name : 'otros' },
