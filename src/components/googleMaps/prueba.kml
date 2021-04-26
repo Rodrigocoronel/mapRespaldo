@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>diputados3.kml</name>
+	<Schema name="SECCION" id="S_SECCION_IDIIIIIDS">
+		<SimpleField type="int" name="gid"><displayName>&lt;b&gt;gid&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="id_2"><displayName>&lt;b&gt;id&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="int" name="entidad"><displayName>&lt;b&gt;entidad&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="int" name="distrito"><displayName>&lt;b&gt;distrito&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="int" name="municipio"><displayName>&lt;b&gt;municipio&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="int" name="seccion"><displayName>&lt;b&gt;seccion&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="int" name="tipo"><displayName>&lt;b&gt;tipo&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="control"><displayName>&lt;b&gt;control&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="geometry1_"><displayName>&lt;b&gt;geometry1_&lt;/b&gt;</displayName>
+</SimpleField>
+	</Schema>
+	<StyleMap id="falseColor1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="falseColor11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor0">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor6">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor040</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor04">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor02">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor03">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor01">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="falseColor100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor00">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor4">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor03</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor5">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor3">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor2">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor20">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor040">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>gid</b></td><td>$[SECCION/gid]</td></tr>
+  <tr><td><b>id</b></td><td>$[SECCION/id_2]</td></tr>
+  <tr><td><b>entidad</b></td><td>$[SECCION/entidad]</td></tr>
+  <tr><td><b>distrito</b></td><td>$[SECCION/distrito]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[SECCION/municipio]</td></tr>
+  <tr><td><b>seccion</b></td><td>$[SECCION/seccion]</td></tr>
+  <tr><td><b>tipo</b></td><td>$[SECCION/tipo]</td></tr>
+  <tr><td><b>control</b></td><td>$[SECCION/control]</td></tr>
+  <tr><td><b>geometry1_</b></td><td>$[SECCION/geometry1_]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>0000ff</color>
+		</PolyStyle>
+	</Style>
+	<Folder id="layer 0">
+		<name>SECCION</name>
+		<open>1</open>
+
+		<Placemark>
+			<name>375</name>
+			<styleUrl>#falseColor11</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_SECCION_IDIIIIIDS">
+					<SimpleData name="gid">1</SimpleData>
+					<SimpleData name="id_2">31</SimpleData>
+					<SimpleData name="entidad">2</SimpleData>
+					<SimpleData name="distrito">1</SimpleData>
+					<SimpleData name="municipio">2</SimpleData>
+					<SimpleData name="seccion">375</SimpleData>
+					<SimpleData name="tipo">2</SimpleData>
+					<SimpleData name="control">2</SimpleData>
+					<SimpleData name="geometry1_"></SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-115.4237749511807,32.67023474928565,0 -115.4243167536293,32.67019554982265,0 -115.4248739623363,32.67015894532762,0 -115.4253739909649,32.67012353542321,0 -115.4258694496034,32.67008844714604,0 -115.4263589037123,32.67005378215377,0 -115.4268723365666,32.67002268300112,0 -115.4274162948501,32.66998477403163,0 -115.4274104772828,32.66992627644922,0 -115.427342980313,32.6692475390421,0 -115.4272653600993,32.66846553524965,0 -115.4271873290408,32.66774450424887,0 -115.4271138574734,32.66706559575245,0 -115.4270413850127,32.66639591125659,0 -115.4239625124972,32.6666025194332,0 -115.4208855785137,32.66685012584973,0 -115.420955825684,32.66751816035624,0 -115.420166468774,32.66757628416708,0 -115.4209038964022,32.66820509273015,0 -115.4210986975328,32.66818991113337,0 -115.4214752439635,32.66885896453952,0 -115.421915214425,32.66964128691712,0 -115.4221963159711,32.66962182129625,0 -115.4222657432907,32.67029042988382,0 -115.4222712259075,32.67034322899814,0 -115.4237749511807,32.67023474928565,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>376</name>
+			<styleUrl>#falseColor11</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_SECCION_IDIIIIIDS">
+					<SimpleData name="gid">2</SimpleData>
+					<SimpleData name="id_2">1204</SimpleData>
+					<SimpleData name="entidad">2</SimpleData>
+					<SimpleData name="distrito">1</SimpleData>
+					<SimpleData name="municipio">2</SimpleData>
+					<SimpleData name="seccion">376</SimpleData>
+					<SimpleData name="tipo">2</SimpleData>
+					<SimpleData name="control">2044</SimpleData>
+					<SimpleData name="geometry1_"></SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-115.4128107223562,32.67102706294857,0 -115.4222712259075,32.67034322899814,0 -115.4222657432907,32.67029042988382,0 -115.4221963159711,32.66962182129625,0 -115.421915214425,32.66964128691712,0 -115.4214752439635,32.66885896453952,0 -115.4210986975328,32.66818991113337,0 -115.4209038964022,32.66820509273015,0 -115.420166468774,32.66757628416708,0 -115.4198742064547,32.66735751594786,0 -115.4193685005092,32.66695405147887,0 -115.4189896297469,32.66631884157991,0 -115.418814301663,32.6660233592392,0 -115.4185854444091,32.66564654278972,0 -115.4183277358682,32.66519004691961,0 -115.4182196977331,32.66500907355531,0 -115.4180732968154,32.6647629395505,0 -115.4178291534588,32.66433584980285,0 -115.4172913218546,32.66444220405533,0 -115.4165638287374,32.66482208789959,0 -115.4160894980983,32.66503739914187,0 -115.4158783756647,32.66521126357684,0 -115.4161812054118,32.66566229340616,0 -115.4164520670441,32.66606414338374,0 -115.4169729095173,32.66684149691708,0 -115.4154609677965,32.66656645310503,0 -115.4146606452067,32.66641836461972,0 -115.4137702988909,32.66625427894368,0 -115.4135632500882,32.66621544960169,0 -115.4130130785383,32.66611369450039,0 -115.4124926314531,32.66601743699989,0 -115.4121726252271,32.66595829423737,0 -115.4117371449046,32.66587780841001,0 -115.4117047233777,32.66640186954238,0 -115.4099509214066,32.66608670795954,0 -115.4085423494265,32.66583450098032,0 -115.4078450607957,32.66570111056402,0 -115.407559524186,32.66564648655446,0 -115.4075561600563,32.66622071415829,0 -115.4075527957243,32.66679494171019,0 -115.4075492340772,32.66740280952148,0 -115.407547452762,32.66770681281889,0 -115.4075447003374,32.66817652879245,0 -115.4075418660041,32.66866019873255,0 -115.4075385119275,32.66923252955856,0 -115.4078239082973,32.6692113178602,0 -115.4081092558547,32.66919010912831,0 -115.4092928690285,32.66910212887846,0 -115.4099595093181,32.66905257121054,0 -115.4099398330042,32.67102949613266,0 -115.4099380242419,32.67121121277304,0 -115.409937628562,32.67125096430163,0 -115.4128107223562,32.67102706294857,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>377</name>
+			<styleUrl>#falseColor11</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_SECCION_IDIIIIIDS">
+					<SimpleData name="gid">3</SimpleData>
+					<SimpleData name="id_2">913</SimpleData>
+					<SimpleData name="entidad">2</SimpleData>
+					<SimpleData name="distrito">1</SimpleData>
+					<SimpleData name="municipio">2</SimpleData>
+					<SimpleData name="seccion">377</SimpleData>
+					<SimpleData name="tipo">2</SimpleData>
+					<SimpleData name="control">1642</SimpleData>
+					<SimpleData name="geometry1_"></SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-115.4039749916869,32.67167058905226,0 -115.405654579045,32.67154812122418,0 -115.409937628562,32.67125096430163,0 -115.4099380242419,32.67121121277304,0 -115.4099398330042,32.67102949613266,0 -115.4099595093181,32.66905257121054,0 -115.4092928690285,32.66910212887846,0 -115.4081092558547,32.66919010912839,0 -115.4078239082973,32.6692113178602,0 -115.4075385119275,32.66923252955856,0 -115.4075418660041,32.66866019873255,0 -115.4075447003374,32.66817652879245,0 -115.407547452762,32.66770681281889,0 -115.4075492340772,32.66740280952148,0 -115.4075527957243,32.66679494171019,0 -115.4075561600563,32.66622071415829,0 -115.407559524186,32.66564648655446,0 -115.4078450607957,32.66570111056402,0 -115.4085423494265,32.66583450098032,0 -115.4086838148514,32.66529786856222,0 -115.4086237944592,32.66528757679722,0 -115.4074941293155,32.66507822267015,0 -115.405820752283,32.66474767430311,0 -115.4041800287252,32.66442362807698,0 -115.4041221570991,32.66472256670195,0 -115.4040301890138,32.66505373908758,0 -115.4038741796169,32.66557990564272,0 -115.4037151413533,32.6661130369875,0 -115.4035425923532,32.6666914963153,0 -115.403582271447,32.66703337774823,0 -115.4036410722235,32.66753998136824,0 -115.4022378027735,32.66763035166633,0 -115.402202325733,32.66811360961054,0 -115.4022010422509,32.66857906383834,0 -115.4022108254685,32.66903706757708,0 -115.4021909029317,32.6695524207993,0 -115.4001414844971,32.66970655124898,0 -115.3989442969493,32.66979659826838,0 -115.3967020527189,32.66996520087134,0 -115.3939091758598,32.67020656056281,0 -115.3947634190249,32.67139658808809,0 -115.3948173903099,32.67147177308964,0 -115.395201817612,32.67170601052517,0 -115.3956225257968,32.67193306681526,0 -115.3958626624778,32.67202339509795,0 -115.396291489658,32.67223054286633,0 -115.4039749916869,32.67167058905226,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+
+	</Folder>
+</Document>
+</kml>

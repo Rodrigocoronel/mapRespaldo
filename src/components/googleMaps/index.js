@@ -17,6 +17,8 @@ import diputados6 from './diputados6.kml';
 import diputados7 from './diputados7.kml';
 import diputados8 from './diputados8.kml';
 
+import TodosKML from './prueba.kml';
+
 /*Images*/
 import angry from './images/angry.png';
 import haha from './images/haha.png';
@@ -31,6 +33,7 @@ let map = null,
     myParser,
     markers = [],
     circles = [];
+   
 
 const generateIcon = () => {
 
@@ -52,6 +55,7 @@ const generateIcon = () => {
 
 }
 let geoXml;
+let  seccion_print=0;
 
 class Map extends Component {
 
@@ -94,14 +98,17 @@ class Map extends Component {
 
         // assign "useTheData" as the after parse function
         geoXml = new window.geoXML3.parser({map: map, afterParse: useTheData, singleInfoWindow: true,});
-        geoXml.parse(diputados1);
-        geoXml.parse(diputados2);
-        geoXml.parse(diputados3);
-        geoXml.parse(diputados4);
-        geoXml.parse(diputados5);
-        geoXml.parse(diputados6);
-        geoXml.parse(diputados7);
-        geoXml.parse(diputados8);
+
+        // geoXml.parse(diputados1);
+        // geoXml.parse(diputados2);
+        // geoXml.parse(diputados3);
+        // geoXml.parse(diputados4);
+        // geoXml.parse(diputados5);
+        // geoXml.parse(diputados6);
+        // geoXml.parse(diputados7);
+        // geoXml.parse(diputados8);
+        geoXml.parse(TodosKML);
+      
 
         // function to retain closure on the placemark and associated text
         function bindPlacemark(placemark, obj) {
@@ -145,31 +152,14 @@ class Map extends Component {
         
         if(distrito > 0) {
             
-            regexfiltrado='diputados'+distrito;
+           
+                /*tenemos que buscar las secciones que corresponden al distrito que se selecciono */
             
-            var patt = new RegExp(regexfiltrado);
-            
-            for(let x=0 ; x<geoXml.docs.length ; x++) {
-                let regex = patt;
-                let match = regex.exec(geoXml.docs[x].baseUrl);
-                
-                if(match !== null){
-                    geoXml.showDocument(geoXml.docs[x]);
-                    docIndex = x;
-                }
-                else
-                    geoXml.hideDocument(geoXml.docs[x]);
-            }
         }else if(distrito === 0){
             show=0;
             showLimit = 8;
                 
-            //show all the districts of filter
-            if(geoXml.docs.length > 0){
-                for(show; show < showLimit; show++) {
-                    geoXml.showDocument(geoXml.docs[show]);
-                }
-            }
+
         }
         
         //buscar la seccion
@@ -211,28 +201,41 @@ class Map extends Component {
                 swal("Sección", "No encontrada", "error");
             }
         }
-        console.log(this.props)
-        console.log(nextProps)
+        // console.log(this.props)
+        // console.log(nextProps)
         if( (this.props.periodo !== nextProps.periodo || this.props.filtrado !== nextProps.filtrado) && this.props.periodo !== undefined){
+
             console.log('entro',nextProps.periodo)
             let url = '';
             if(nextProps.filtrado === 1){
-                url = 'seccionesDiputadosDistrito/';
+                url = 'seccionesDiputadosDistrito/0';
             }else{
-                url = 'seccionesSenadoresDistrito/';
+                url = 'seccionesSenadoresDistrito/0';
             }
-            for(var dis=1 ; dis < 9 ; dis++){
-                request.get('api/'+url+dis+'/'+periodo.created_at)
+
+            // for(var dis=1 ; dis < 9 ; dis++){
+            //     request.get('api/'+url+dis+'/'+periodo.created_at)
+            //     .then(function(response){
+            //         if(response.status === 200){
+            //             // response.data.map((key,index)=>{
+            //             //     console.log(key)
+            //             // })           
+            //             print(response.data)
+                        
+            //         }
+            //     });
+            // }
+           
+                request.get('api/'+url+'/'+periodo.created_at)
                 .then(function(response){
                     if(response.status === 200){
-                        // response.data.map((key,index)=>{
-                        //     console.log(key)
-                        // })           
+                          
+                        // console.log('params --> '+response.data)       
                         print(response.data)
                         
                     }
                 });
-            }
+            
         }
 
         function buscarKml (distrito) {
@@ -254,29 +257,63 @@ class Map extends Component {
                 return index_kml;
             }
 
+
+            function findSeccionPrint(element) {
+              return element.name == seccion_print;
+            }
             function print(params) {
 
-                let index_kml = buscarKml(params[0].distrito)
-                console.log('params --> '+params[0].distrito)
-                console.log('index del docs -->' + index_kml)
-                for(var x = 0 ; x<params.length ; x++){
+
+              geoXml.docs[0].placemarks[0].polygon.fillColor ="#00aa44";
+               geoXml.docs[0].placemarks[0].polygon.strokeColor ="#00aa44";
+              
+              geoXml.docs[0].placemarks[0].polygon.fillOpacity ="0";
+              console.log('mapa geoXml--->',geoXml);
+              console.log('documentos--->',geoXml.docs);
+              console.log('placemarks----->',geoXml.docs[0].placemarks);
+               console.log('placemark 0----->',geoXml.docs[0].placemarks[0]);
+               console.log('placemark 0 polygon----->',geoXml.docs[0].placemarks[0].polygon);
+               // geoXml.processStyles(geoXml.docs[0]);
+
+                // let index_kml = buscarKml(params[0].distrito)
+                // console.log('params --> '+params[0].distrito)
+                // console.log('index del docs -->' + index_kml)
+                // for(var x = 0 ; x<params.length ; x++){
                     // console.log(params[x].color)
-                    geoXml.docs[index_kml].placemarks[x].polygon.fillColor = params[x].color;
+                    // seccion_print=params[x].seccion;
+                    // console.log('seccion_print--->',seccion_print);
+                    // index = geoXml.docs[0].placemarks.findIndex(findSeccionPrint);
+                   
+                    // if(index !== -1){
+                    //      console.log('index--->',index)
+                    //      console.log('placemark--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
+                    //      console.log('color--->',params[x].color)
+                         // geoXml.docs[0].placemarks[index].polygon.fillColor = params[x].color;
+                    //      console.log('placemark nuevo color--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
+                         // break;
+                    // }
+                   
+                     
+                    // if(x==2)
+                    //     break;
                     
-                }
-                if(nextProps.distrito == 0){
-                    geoXml.hideDocument(geoXml.docs[index_kml]);
-                    geoXml.showDocument(geoXml.docs[index_kml]);
-                }
-                else if(params[0].distrito == nextProps.distrito ){
-                    geoXml.hideDocument(geoXml.docs[index_kml]);
-                    geoXml.showDocument(geoXml.docs[index_kml]);
-                }
+                // }
+                
+                    geoXml.hideDocument(geoXml.docs[0]);
+                    geoXml.showDocument(geoXml.docs[0]);
+                    
+                
+               
+                  
+                
+
+
+  
+
                 
             }
 
-        console.log(geoXml.docs)
-
+        
     }
 
 
