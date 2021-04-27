@@ -17,7 +17,8 @@ import diputados6 from './diputados6.kml';
 import diputados7 from './diputados7.kml';
 import diputados8 from './diputados8.kml';
 
-import TodosKML from './prueba.kml';
+import TodosKML from './todos.kml';
+
 
 /*Images*/
 import angry from './images/angry.png';
@@ -108,6 +109,7 @@ class Map extends Component {
         // geoXml.parse(diputados7);
         // geoXml.parse(diputados8);
         geoXml.parse(TodosKML);
+   
       
 
         // function to retain closure on the placemark and associated text
@@ -213,18 +215,7 @@ class Map extends Component {
                 url = 'seccionesSenadoresDistrito/0';
             }
 
-            // for(var dis=1 ; dis < 9 ; dis++){
-            //     request.get('api/'+url+dis+'/'+periodo.created_at)
-            //     .then(function(response){
-            //         if(response.status === 200){
-            //             // response.data.map((key,index)=>{
-            //             //     console.log(key)
-            //             // })           
-            //             print(response.data)
-                        
-            //         }
-            //     });
-            // }
+            
            
                 request.get('api/'+url+'/'+periodo.created_at)
                 .then(function(response){
@@ -240,7 +231,7 @@ class Map extends Component {
 
         function buscarKml (distrito) {
                 
-                regexfiltrado='diputados'+distrito;
+                regexfiltrado='prueba'+distrito;
                 let index_kml;
                 var patt = new RegExp(regexfiltrado);
                 
@@ -263,45 +254,51 @@ class Map extends Component {
             }
             function print(params) {
 
-
-              geoXml.docs[0].placemarks[0].polygon.fillColor ="#00aa44";
-               geoXml.docs[0].placemarks[0].polygon.strokeColor ="#00aa44";
+                let index_kml =0;
+                let contador=0;
+              // geoXml.docs[index_kml].placemarks[0].polygon.fillColor ="#00aa44";
+               // geoXml.docs[index_kml].placemarks[0].polygon.strokeColor ="#00aa44";
               
-              geoXml.docs[0].placemarks[0].polygon.fillOpacity ="0";
-              console.log('mapa geoXml--->',geoXml);
-              console.log('documentos--->',geoXml.docs);
-              console.log('placemarks----->',geoXml.docs[0].placemarks);
-               console.log('placemark 0----->',geoXml.docs[0].placemarks[0]);
-               console.log('placemark 0 polygon----->',geoXml.docs[0].placemarks[0].polygon);
+              // geoXml.docs[index_kml].placemarks[0].polygon.fillOpacity ="1";
+              // console.log('mapa geoXml--->',geoXml);
+              // console.log('documentos--->',geoXml.docs);
+              // console.log('placemarks----->',geoXml.docs[index_kml].placemarks);
+              //  console.log('placemark 0----->',geoXml.docs[index_kml].placemarks[0]);
+              //  console.log('placemark 0 polygon----->',geoXml.docs[index_kml].placemarks[0].polygon);
                // geoXml.processStyles(geoXml.docs[0]);
 
                 // let index_kml = buscarKml(params[0].distrito)
                 // console.log('params --> '+params[0].distrito)
                 // console.log('index del docs -->' + index_kml)
-                // for(var x = 0 ; x<params.length ; x++){
+                for(var x = 0 ; x<params.length ; x++){
                     // console.log(params[x].color)
-                    // seccion_print=params[x].seccion;
+                    seccion_print=params[x].seccion;
                     // console.log('seccion_print--->',seccion_print);
-                    // index = geoXml.docs[0].placemarks.findIndex(findSeccionPrint);
+                    index = geoXml.docs[0].placemarks.findIndex(findSeccionPrint);
+                     // console.log('index--->',index);
                    
-                    // if(index !== -1){
-                    //      console.log('index--->',index)
-                    //      console.log('placemark--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
-                    //      console.log('color--->',params[x].color)
-                         // geoXml.docs[0].placemarks[index].polygon.fillColor = params[x].color;
-                    //      console.log('placemark nuevo color--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
-                         // break;
-                    // }
+                    if(index !== -1){
+                         
+                         // console.log('placemark--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
+                         // console.log('color--->',params[x].color)
+                         geoXml.docs[0].placemarks[index].polygon.fillColor = params[x].color;
+                         geoXml.docs[index_kml].placemarks[index].polygon.fillOpacity ="1";
+                         // console.log('placemark nuevo color--->',geoXml.docs[0].placemarks[index].polygon.fillColor)
+                        
+                    }else{
+                        contador++;
+                    }
                    
                      
                     // if(x==2)
                     //     break;
                     
-                // }
+                }
                 
-                    geoXml.hideDocument(geoXml.docs[0]);
-                    geoXml.showDocument(geoXml.docs[0]);
-                    
+                    geoXml.hideDocument(geoXml.docs[index_kml]);
+                    setTimeout(function(){  geoXml.showDocument(geoXml.docs[index_kml]);}, 500);
+                   
+                        console.log('contador--->',contador)
                 
                
                   
