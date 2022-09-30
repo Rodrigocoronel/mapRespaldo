@@ -11,7 +11,7 @@
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
     "react-table": "^6.8.6",
-    "recharts": "^1.0.0-beta.10",
+    "recharts": "^2.1.14",
     "sweetalert2": "^7.22.0"
   },
   "scripts": {
